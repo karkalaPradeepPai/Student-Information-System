@@ -1,0 +1,57 @@
+﻿@model IEnumerable<S1G4_SISDB1.Models.StudyTerms>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TermStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TermEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TermYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TermSeason)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermSeason)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TermID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TermID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TermID })
+        </td>
+    </tr>
+}
+
+</table>

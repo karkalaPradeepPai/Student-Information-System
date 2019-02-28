@@ -1,0 +1,51 @@
+﻿@model IEnumerable<S1G4_SISDB1.Models.Instructors>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructorFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructorLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructorPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructorHireDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructorLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructorPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructorHireDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InstructorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InstructorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InstructorID })
+        </td>
+    </tr>
+}
+
+</table>

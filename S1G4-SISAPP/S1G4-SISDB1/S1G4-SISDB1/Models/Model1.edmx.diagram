@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="521c07eb43fe4ef48cdda74e21099b37" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Courses" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Departments" Width="1.5" PointX="1.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Instructors" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Students" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StudyTerms" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Registrations" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TeachingAssignments" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Courses_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registrations_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TeachingAssignments_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TeachingAssignments_Instructors" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registrations_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registrations_StudyTerms" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TeachingAssignments_StudyTerms" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

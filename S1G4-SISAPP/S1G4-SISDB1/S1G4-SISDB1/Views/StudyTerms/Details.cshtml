@@ -1,0 +1,58 @@
+﻿@model S1G4_SISDB1.Models.StudyTerms
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudyTerms</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TermName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TermStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TermEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TermYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TermSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermSeason)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TermID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
